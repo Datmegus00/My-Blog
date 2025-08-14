@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gustavo Armendariz</title>
+  <style>
+    /* Base reset */
+    * { box-sizing: border-box; }
+
+    /* Body: keep the green vibe, add subtle camo-like pattern via layered gradients */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #e5f0e5;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(34, 56, 34, 0.6) 0 40%, transparent 41%),
+        radial-gradient(circle at 80% 30%, rgba(20, 36, 20, 0.55) 0 35%, transparent 36%),
+        radial-gradient(circle at 40% 80%, rgba(16, 30, 16, 0.5) 0 35%, transparent 36%),
+        #0f1e0f; /* deep green base from your original */
+      padding: 0 16px 24px;
+    }
+
+    /* Header (from index.html layout, recolored) */
+    .header {
+      padding: 40px 16px;
+      text-align: center;
+      background:
+        linear-gradient(180deg, rgba(12,26,12,0.85), rgba(12,26,12,0.85)),
+        repeating-linear-gradient(45deg, #132513, #132513 12px, #0f1e0f 12px, #0f1e0f 24px);
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    .header h1 {
+      margin: 0 0 8px;
+      font-size: 40px;
+      color: #cfead0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .header p { color: #a8d3a9; margin: 0; }
+
+    /* Optional simple nav bar */
+    .topnav {
+      margin: 16px auto 0;
+      max-width: 1200px;
+      background-color: #1e2e1e;
+      border: 1px solid #294129;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: #cceccc;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .topnav a:hover { background-color: #2a422a; text-decoration: underline; }
+    .topnav::after { content: ""; display: table; clear: both; }
+
+    /* Two-column blog layout (from index.html) */
+    .row { max-width: 1200px; margin: 16px auto 0; }
+    .leftcolumn { float: left; width: 75%; }
+    .rightcolumn { float: left; width: 25%; padding-left: 20px; }
+
+    /* Card style (recolored) */
+    .card {
+      background-color: #152515;
+      color: #e5f0e5;
+      padding: 20px;
+      margin-top: 20px;
+      border: 1px solid #294129;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .card h2 { color: #aaffaa; margin-top: 0; }
+    .card h3 { color: #c2f1c2; margin-top: 0; }
+    .meta { color: #96c996; font-size: 0.95rem; margin-top: -8px; margin-bottom: 12px; }
+
+    /* Fake image / media placeholder */
+    .fakeimg {
+      background: #264026;
+      width: 100%;
+      padding: 24px;
+      border: 1px dashed #3a5d3a;
+      border-radius: 10px;
+      text-align: center;
+      color: #a8d3a9;
+    }
+
+    /* Responsive image with green border */
+    .media {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 4px solid #558855;
+      border-radius: 10px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after { content: ""; display: table; clear: both; }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #0c1a0c;
+      color: #88aa88;
+      margin-top: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+
+    /* Responsive layout */
+    @media screen and (max-width: 900px) {
+      .leftcolumn, .rightcolumn { width: 100%; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Title -->
+  <div class="header">
+    <h1>Gustavo Armendariz</h1>
+    <p>First‑Gen | CS | Philosophy • Biology • Fashion • Cybersecurity | RA & SGA Executive Chief Justice</p>
+  </div>
+
+  <!-- Simple top navigation (optional) -->
+  <div class="topnav">
+    <a href="#about">About</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#goals">Goals</a>
+    <a href="#projects">Projects</a>
+  </div>
+
+  <!-- Main two-column layout like index.html -->
+  <div class="row">
+    <!-- Left column: main content cards -->
+    <div class="leftcolumn">
+      <div id="about" class="card">
+        <h2>About Me</h2>
+        <div class="meta">Updated 2025</div>
+        <p>I'm a first‑generation college student from Eagle Pass, Texas, studying Computer Science (with plans for a Math or Biology minor). I'm passionate about cybersecurity, biomedical research, and design. I currently serve as Chief Justice of the Student Government Association and work as a Resident Assistant.</p>
+      </div>
+
+      <div id="hobbies" class="card">
+        <h2>Hobbies</h2>
+        <div class="meta">What I do for fun</div>
+        <p>Working out (chest & shoulders supremacy), sketching architecture and fashion, thrifting, and playing tennis. I love learning about metaphysics, quantum stuff, and life sciences. Forever a student.</p>
+      </div>
+
+      <div id="gym" class="card">
+        <h2>WE GO JIM</h2>
+        <div class="meta">Siempre al cien, ya sabes.</div>
+        <!-- Replace src with your hosted image path (avoid local /Users/... paths) -->
+        <img class="media" src="assets/gus-gym.jpg" alt="Gym picture placeholder" />
+      </div>
+
+      <div id="goals" class="card">
+        <h2>Career Goals</h2>
+        <p>Blend CS with my special interests. Long‑term: launch a fashion‑tech brand or serve in a cybersecurity role (Space Force = dream). Also into web design to make brands look and function better.</p>
+      </div>
+
+      <div id="projects" class="card">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>This Website:</strong> Personal site to show clean HTML/CSS and a cohesive aesthetic.</li>
+          <li><strong>Los Ángeles Azules (IM Soccer):</strong> Recruited members, designed logos, produced uniforms.</li>
+          <li><strong>Cybersecurity for First‑Gen Students:</strong> Research on phishing awareness and digital safety.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right column: sidebar cards -->
+    <div class="rightcolumn">
+      <div class="card">
+        <h3>About Me (Quick)</h3>
+        <div class="fakeimg" style="height:120px;">Drop a headshot here</div>
+        <p>UHV • RA • SGA Exec CJ • 🇲🇽</p>
+      </div>
+
+      <div class="card">
+        <h3>Photos</h3>
+        <div class="fakeimg" style="height:90px;">Image 1</div><br>
+        <div class="fakeimg" style="height:90px;">Image 2</div><br>
+        <div class="fakeimg" style="height:90px;">Image 3</div>
+      </div>
+
+      <div class="card">
+        <h3>Contact</h3>
+        <p><strong>Email:</strong> 2405744@uhv.edu</p>
+        <p><strong>Alt:</strong> Armendarizgm@uhv.edu</p>
+      </div>
+
+      <div class="card">
+        <h3>Follow</h3>
+        <p>IG • X • LinkedIn — add links</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2>&copy; 2025 Gustavo Armendariz — Made with 💻🧠🇲🇽</h2>
+  </div>
+</body>
+</html>
